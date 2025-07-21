@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js Backend CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-test:
+  backend-tests:
     runs-on: ubuntu-latest
 
     services:
@@ -32,10 +32,13 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: login-app-backend 
 
       - name: Run tests
         run: npm test
+        working-directory: login-app-backend 
 
       - name: Lint (optionnel)
         run: npm run lint
+        working-directory: login-app-backend
         continue-on-error: true
