@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-    <h2 class="text-2xl font-bold mb-4 text-center">Connexion</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Connexion!</h2>
     <form @submit.prevent="login" class="flex flex-col gap-4">
       <input v-model="email" type="email" placeholder="Email" class="input" />
       <input v-model="password" type="password" placeholder="Mot de passe" class="input" />
