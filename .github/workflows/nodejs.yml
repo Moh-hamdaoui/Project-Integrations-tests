@@ -34,6 +34,18 @@ jobs:
         run: npm install
         working-directory: login-app-backend 
 
+      - name: Install dependencies
+        run: npm install
+        working-directory: login-app-backend 
+
+      - name: Debug permissions in node_modules/.bin
+        run: ls -l ./node_modules/.bin
+        working-directory: login-app-backend
+
+      - name: Fix executable permissions on node_modules/.bin
+        run: chmod -R +x ./node_modules/.bin
+        working-directory: login-app-backend
+
       - name: Run tests
         run: npm test
         working-directory: login-app-backend 
